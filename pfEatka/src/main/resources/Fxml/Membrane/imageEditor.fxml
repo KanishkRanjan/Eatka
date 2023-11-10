@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="758.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="758.0" prefWidth="1207.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="eraseBtn" mnemonicParsing="false" text="Erase" />
+                  <Button fx:id="drawBtn" mnemonicParsing="false" text="Draw" />
+                  <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                  <Button fx:id="loadImageBtn" mnemonicParsing="false" text="Load Image" />
+               </children>
+            </HBox>
+            <HBox prefHeight="661.0" prefWidth="1207.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane hbarPolicy="ALWAYS" prefHeight="660.0" prefWidth="1207.0" vbarPolicy="ALWAYS">
+                    <content>
+                      <AnchorPane fx:id="parentAnchor" minHeight="0.0" minWidth="0.0" prefHeight="5000.0" prefWidth="5000.0">
+                           <children>
+                              <Canvas fx:id="playGround" height="5000.0" width="5000.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

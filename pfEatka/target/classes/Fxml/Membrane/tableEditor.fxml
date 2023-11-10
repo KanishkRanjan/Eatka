@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="532.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="98.0" prefWidth="880.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="446.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="880.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rows">
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="numberOfRowsField" promptText="Number Of Rows" text="5" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="880.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Columns" />
+                        <TextField fx:id="numberOfColumnField" promptText="Number Of Columns" text="4" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="880.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color" />
+                        <ColorPicker fx:id="colorPickerBtn">
+                           <value>
+                              <Color />
+                           </value>
+                        </ColorPicker>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="880.0" spacing="10.0">
+               <children>
+                  <Button fx:id="generateTableBtn" mnemonicParsing="false" text="Generate Table" />
+                  <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                  <Button fx:id="zoomPositive" mnemonicParsing="false" text="Zoom+" />
+                  <Button fx:id="zoomNegative" mnemonicParsing="false" text="Zoom-" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="parentAnchor" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+         <children>
+            <Canvas fx:id="playGround" height="446.0" width="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
